@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "aws-starter"
+version = "0.1.0"
+description = ""
+authors = ["SauthO <shuta0698@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+langchain = "^0.2.15"
+openai = "^1.43.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
