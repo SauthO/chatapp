@@ -10,6 +10,7 @@ python = "^3.12"
 langchain = "^0.2.15"
 openai = "^1.43.0"
 streamlit = "^1.38.0"
+langchain-openai = "^0.1.23"
 
 
 [build-system]

@@ -1,5 +1,7 @@
 import streamlit as st
-
+import os
+from langchain_openai import ChatOpenAI
+from langchain.schema import HumanMessage
 st.title("langchain-streamlit-app")
 
 if "messages" not in st.session_state:
@@ -19,5 +21,11 @@ if prompt:
 
     with st.chat_message("assistant"):
         response = "Hi!"
+        chat = ChatOpenAI(
+            model_name = "gpt-4o-mini-2024-07-18",
+            temperature = 0.5
+        )
+        messages = [HumanMessage(content=prompt)]
+        response = chat(messages).content
         st.markdown(response)
     st.session_state.messages.append({"role": "assistant", "content": response})
